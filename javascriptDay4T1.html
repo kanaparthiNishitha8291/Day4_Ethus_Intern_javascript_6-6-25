@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 1 - Reverse Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    h2 {
+      color: #007B5E;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Exercise 1: Reverse a Number</h2>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="reverseNumber()">Reverse Number</button>
+  <p id="reverseResult"></p>
+</div>
+
+<script>
+  function reverseNumber() {
+    let num = document.getElementById("numberInput").value;
+    let reversed = num.toString().split('').reverse().join('');
+    document.getElementById("reverseResult").innerText = "Reversed Number: " + parseInt(reversed);
+  }
+</script>
+
+</body>
+</html>

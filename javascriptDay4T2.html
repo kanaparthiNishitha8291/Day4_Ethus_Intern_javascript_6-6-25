@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 2 - Sort String</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #0057D9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    h2 {
+      color: #0057D9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Exercise 2: Sort String Alphabetically</h2>
+  <input type="text" id="stringInput" placeholder="Enter a string">
+  <button onclick="sortString()">Sort String</button>
+  <p id="sortResult"></p>
+</div>
+
+<script>
+  function sortString() {
+    let str = document.getElementById("stringInput").value;
+    let sorted = str.split('').sort().join('');
+    document.getElementById("sortResult").innerText = "Sorted String: " + sorted;
+  }
+</script>
+
+</body>
+</html>
